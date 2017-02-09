@@ -11,6 +11,6 @@ function getCoordinatesForCity(cityName){
 	return(
 		fetch(url)
 		.then(response => response.json())
-		.then(data => data.result[0].geometry.location)
+		.then(data => data.results[0].geometry.location)
 	);
 }
