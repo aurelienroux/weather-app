@@ -28,7 +28,12 @@ function getCurrentWeather(coords){
 	);
 }
 
-
+// JAVASCRIPT UI ////////////////////////////////////
+var app = document.querySelector('#app');
+var cityForm = document.querySelector('.city-form');
+var cityInput = cityForm.querySelector('.city-input');
+var getWeatherButton = cityForm.querySelector('.get-weather-button');
+var cityWeather = app.querySelector('.city-weather');
 
 
 
