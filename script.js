@@ -35,7 +35,11 @@ var cityInput = cityForm.querySelector('.city-input');
 var getWeatherButton = cityForm.querySelector('.get-weather-button');
 var cityWeather = app.querySelector('.city-weather');
 
+getWeatherButton.addEventListener('click', function(){
+	var city = cityInput.value;
 
+	
+})
 
 
 
