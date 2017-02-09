@@ -9,7 +9,7 @@ function getCoordinatesForCity(cityName){
 	var url = `${GOOGLE_MAPS_API_URL}?address=${cityName}&key=${GOOGLE_MAPS_API_KEY}`;
 
 	return(
-		.fetch(url)
+		fetch(url)
 		.then(response => response.json())
 		.then(data => data.result[0].geometry.location)
 	);
