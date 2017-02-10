@@ -10,7 +10,6 @@
 	// GOOGLE MAPS SETTING ///////////////////////////////
 	function getCoordinatesForCity(cityName){
 		var url = `${GOOGLE_MAPS_API_URL}?address=${cityName}&key=${GOOGLE_MAPS_API_KEY}`;
-
 		return(
 			fetch(url)
 			.then(response => response.json())
@@ -21,7 +20,6 @@
 	// DARKSKY SETTING//////////////////////////////////////
 	function getCurrentWeather(coords){
 		var url = `${CORS_PROXY}${DARKSKY_API_URL}${DARKSKY_API_KEY}/${coords.lat},${coords.lng}?units=si&exclude=minutely,hourly,daily,alerts,flags`;
-
 		return(
 			fetch(url)
 			.then(response => response.json())
@@ -39,7 +37,6 @@
 	// USER INPUT AND TRIGGER ///////////////////////////
 	cityForm.addEventListener('submit', function(event){
 		event.preventDefault();
-
 		var city = cityInput.value;
 
 		getCoordinatesForCity(city)
